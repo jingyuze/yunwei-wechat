@@ -1,0 +1,32 @@
+<!--pages/car_rent/car_rent.wxml-->
+<view class="header_add" bindtap="tiaozhuan">
+ <image src="/images/+@3x.png" class='q' mode="widthFix"></image>
+
+新增月租</view>
+<scroll-view scroll-y style='white-space: nowrap;' class='zj'>
+ <block wx:for="{{return_data}}" wx:key="{{index}}">
+<view class='box'>
+    <view class='header'>{{return_data[index].ParkName}}
+    <view class="fixnews" bindtap="fixnews">异常上报</view>
+    </view>
+    <view class="content">
+     <block wx:for="{{return_data[index].RentList}}"  wx:for-index="i">
+      <view class='wenzi'>
+        <text>{{item.Key}}</text>
+        <text style="color:{{return_data[index].RentList[i].Color}}">{{item.Value}}</text>
+        <text wx:if="{{return_data[index].RentList[i].Key == '到期时间：'? true : false}}" class="renewal" bindtap="renewal" data-alpha-beta="{{index}}">续期</text>
+      </view>
+     </block>
+     
+    </view>
+
+  <view class="butt">
+    <view class="but" bindtap="list" wx:if="{{return_data[index].ButtonState == '1'&&return_data[index].RentType == '2'? true : false}}" data-alpha-beta="{{index}}">空位列表选择</view>
+    <view class="but" bindtap="photo" wx:if="{{return_data[index].ButtonState == '1'&&return_data[index].RentType == '2'? true : false}}" data-url="{{index}}">空位图选择</view>
+    <view class="but" wx:if="{{return_data[index].ButtonState == '1'&&return_data[index].RentType == '1'? true : false}}" bindtap="openlock" data-b="{{index}}">打开车位锁</view>
+    <view class="but" bindtap="fault" wx:if="{{return_data[index].ButtonState == '0'? true : false}}" data-alpha-be="{{index}}">故障</view>
+    <view class="but" wx:if="{{return_data[index].ButtonState == '2'? true : false}}" bindtap="parkinfo" data-a="{{index}}">停车信息</view>
+  </view>
+</view>
+  </block>
+</scroll-view>

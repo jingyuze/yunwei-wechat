@@ -1,0 +1,7 @@
+<!--pages/order_details_history/order_details_history.wxml-->
+
+<view class='box'>
+  <block wx:for="{{return_data}}" wx:for-item="item">
+    <view class='wenzi'>{{item.Key}}{{item.Value}}</view>
+  </block>
+</view>

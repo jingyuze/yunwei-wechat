@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<!-- <view class='containe'>
+  <view class='header'>
+  <text class='text text1'>三泰·魔方地面停车场车位实时状态分布图</text>
+  <text class='text text2'>(车位总数40个，当前空位3个）</text>
+  <image src="/images/menu.png" class='menu' mode='widthFix' bindtap="list"></image>
+  </view>
+  <scroll-view scroll-x="true" class="page_content">
+   <image src="/images/st.jpg" class='bigimg' mode='aspectFit'></image>
+  </scroll-view>
+  <view class='fotter'>
+  <image src="/images/st.jpg" class='left_img' mode='aspectFit'></image>
+  <text class='text text3'>左右翻页到不同停车层</text>
+  <image src="/images/st.jpg" class='right_bigimg' mode='aspectFit'></image>
+  </view>
+</view> -->
+<web-view bindmessage="handleGetMessage" src="{{UR}}"></web-view>

@@ -1,0 +1,26 @@
+<!--pages/order_management/order_management.wxml-->
+<!--pages/user_management/user_management.wxml-->
+<view class='header' hidden="{{xiha}}">
+<view class='box_4'>用户信息</view>
+<view class='box_1'>预订时间</view>
+<view class='box_2'>车位</view>
+<view class='box_3'>操作</view>
+</view>
+<!-- 中间内容 -->
+<scroll-view scroll-y style='white-space: nowrap;' class='zj'>
+<view class='datu' hidden="{{xixi}}">
+<image src="/images/in_nothing.png" class='tu' mode="widthFix" hidden="{{xixi}}"></image>
+<view class='tishi' hidden="{{xixi}}">亲，当前没有预订订单!</view>
+</view>
+<block wx:for="{{result}}" wx:key="{{index}}">
+<view class='box'>
+<view class='index'>{{index+1}}</view>
+<view class='box_a'><image src="/images/head.png" class='t' mode="widthFix"></image></view>
+<view class='box_e'>{{item.PlateNumber}}</view>
+<view class='box_b'><text>{{item.ReserveTime}}</text></view>
+<view class='box_c'>{{item.ReserveLot}}</view>
+<view class='box_d' bindtap='xiangqing' data-id="{{index}}">详情</view>
+</view>
+</block>
+</scroll-view>
+<view class='fotter'><text class='yangshi'>请及时为车主保留预订的车位！</text></view>

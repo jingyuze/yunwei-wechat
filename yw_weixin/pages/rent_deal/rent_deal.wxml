@@ -1,0 +1,2 @@
+<!--pages/rent_deal/rent_deal.wxml-->
+<web-view src="{{'http://125.67.237.92:8003/webview/rent_deal.html'}}"></web-view>

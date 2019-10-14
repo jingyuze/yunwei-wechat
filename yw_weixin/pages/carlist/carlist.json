@@ -1,0 +1,6 @@
+{
+      "onReachBottomDistance": 50,
+      "backgroundTextStyle": "dark",
+      "enablePullDownRefresh": true,
+  "navigationBarTitleText": "车位列表"
+}

@@ -1,0 +1,229 @@
+/* pages/fare_payment/fare_payment.wxss */
+
+page {
+  height: 100%;
+  overflow: hidden;
+  background: #ecf2f2;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 2rpx solid #dcdfdf;
+  padding-left: 30rpx;
+  padding-top: 12rpx;
+  padding-bottom: 12rpx;
+}
+
+.box {
+  width: 90%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 40rpx;
+}
+
+.head {
+  width: 100%;
+  height: 30rpx;
+  background: #23bfb2;
+  border-radius: 8rpx;
+}
+
+.content {
+  width: 94%;
+  background: #fff;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+
+.he {
+  width: 100%;
+  font-size: 28rpx;
+  color: #797777;
+  text-align: center;
+  margin-top: 30rpx;
+  padding-bottom: 10rpx;
+}
+
+.space_line {
+  height: 2rpx;
+  width: 480rpx;
+  background-color: #dcdfdf;
+}
+
+.wenzi {
+  display: flex;
+  letter-spacing: 0rpx;
+  font-size: 30rpx;
+  color: #141414;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* .wenzi text{padding: 12rpx 60rpx 12rpx 60rpx;} */
+
+.tesu {
+  padding-top: 40rpx;
+}
+
+.tesu_1 {
+  padding-bottom: 40rpx;
+}
+
+.tishi {
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 65rpx;
+  margin-right: 65rpx;
+  margin-top: 30rpx;
+  justify-content: flex-start;
+}
+
+.qq {
+  width: 80rpx;
+  height: 80rpx;
+  display: block;
+  float: left;
+}
+
+.ti {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80rpx;
+}
+
+.tv_hint_title {
+  color: #23bfb2;
+  font-size: 28rpx;
+}
+
+.but {
+  width: 80%;
+  background: #23bfb2;
+  color: #fff;
+  font-size: 32rpx;
+  letter-spacing: 1rpx;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 100rpx;
+  left: 10%;
+}
+
+.a {
+  padding: 6rpx 0rpx 6rpx 60rpx;
+  color: #4e4b4bf3;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.b {
+  color: #4e4b4bf3;
+  padding: 6rpx 60rpx 6rpx 0rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.tv_plate {
+  font-size: 32rpx;
+  color: #4e4b4bf3;
+}
+
+.tv_a_font {
+  padding: 6rpx 0rpx 6rpx 60rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 32rpx;
+}
+
+.tv_b_font {
+  padding: 6rpx 60rpx 6rpx 0rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 32rpx;
+  color: #fa6e10;
+}
+
+.tv_hint {
+ display: flex;
+  font-size: 26rpx;
+  color: #4e4b4b;
+}
+
+.v_hint {
+ display: flex;
+  justify-content: flex-start;
+}
+.tu {
+  width: 250rpx;
+  height: 250rpx;
+}
+.tishi {
+  width: 620rpx;
+  display: flex;
+  font-size: 30rpx;
+  text-align: center;
+  color: #23bfb2;
+}
+.datu {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 99999;
+  background: #ffffff;
+}
+.pay_box{width: 100%;height: 240rpx;position: absolute;bottom: 0;display: flex;align-items: center;flex-direction: column;background: #ffffff;}
+.tupian {
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+.tupian:first-child{border-bottom: 1rpx solid #E1E1E1;}
+.zhifu {
+  font-size: 30rpx;
+  display: block;
+  float: left;
+  padding-left: 15rpx;
+}
+.t {
+  width: 12%;
+  display: block;
+  float: left;
+  padding-left: 40rpx;
+}
+.bright789_view_hide{
+     animation: slideup 0.5s linear ;
+     transform: translateY(240rpx);
+     transition: 1S;
+}
+.bright789_view_show{
+    animation: slidedown 0.5s linear ;
+    transform: translateY(0);
+    transition: 1S;
+}
+.page_box{width: 100%;height: 100%;}

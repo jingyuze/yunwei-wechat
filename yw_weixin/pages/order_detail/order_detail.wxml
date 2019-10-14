@@ -1,0 +1,29 @@
+<view wx:if="{{v_all_show}}">
+  <view class='box'>
+    <block wx:for="{{result.ListValue}}" wx:for-item="item">
+      <view class='wenzi'>{{item.Key}}{{item.Value}}</view>
+    </block>
+  </view>
+
+  <view class="tixing">
+    <text>你的车位已预订成功，请及时到达停车场！</text>
+    <text>祝你停车愉快！</text>
+  </view>
+
+  <view class="tishi">
+    <view class="ti">
+      <image src='/images/xiaobiaozhi@2x.png' class='qq'></image>
+      <text class="tv_hint_title">温馨提示</text>
+    </view>
+
+    <view class="v_hint">
+      <text class="tv_hint">{{result.HintContent}}</text>
+    </view>
+  </view>
+
+  <view class="menu">
+    <view class="anniu" bindtap="cancel">取消订单</view>
+    <view class="anniu" bindtap="look_map">车位状态</view>
+    <view class="anniu" bindtap="open_lock">打开车锁</view>
+  </view>
+</view>

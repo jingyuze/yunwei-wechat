@@ -1,0 +1,21 @@
+/* pages/rent_type/rent_type.wxss */
+page {
+  height: 100%;
+  overflow: hidden;
+  background: #ecf2f2;
+  position: relative;
+}
+.containe{width: 100%;padding: 0;}
+.bg{width: 100%;display: block;position: absolute;top: 0;left: 0;z-index: -99;height: 200rpx;}
+.header{width: 100%;height: 150rpx;display: flex;align-items: center;justify-content: center;color: #ffffff;font-size: 32rpx;}
+.menu{width: 100%;height: 100rpx;display: flex;align-items: center;justify-content: center;flex-direction: row;}
+.menu_left,.menu_right{width: 250rpx;height: 100rpx;background: #FFFFFF;color: #C9C9C9;display:flex;align-items: center;justify-content: center;position: relative;}
+.menu_left{border-top-left-radius: 10rpx;border-bottom-left-radius: 10rpx;background: #23bfb2}
+.menu_right{border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;}
+.size{width: 50rpx;height: 24rpx;display: block;}
+.triangle{width: 50rpx;height: 24rpx;position: absolute;bottom: -22rpx;left: 100rpx;}
+.content{width: 95%;border-radius: 10rpx;background: #ffffff;margin: 0 auto; margin-top: 50rpx;box-shadow: 5rpx 5rpx 5rpx #C9C9C9;}
+.content_text{width: 90%;display: flex;flex-direction: column;margin: 0 auto;}
+.content_text view{padding-top: 20rpx;overflow: hidden;text-overflow: ellipsis;line-height: 40rpx;font-size: 32rpx;padding: 10rpx;}
+.moshi{width: 100%;box-sizing: border-box;border-top: 3rpx solid #C9C9C9;display: flex;align-items: center;padding: 20rpx;justify-content: flex-end;color: #23bfb2;}
+.submit{width: 100%;height: 100rpx;background:#23bfb2;display: flex;align-items: center;justify-content: center;position: absolute;bottom: 0;color: #ffffff;font-size: 36rpx;letter-spacing: 2rpx;}

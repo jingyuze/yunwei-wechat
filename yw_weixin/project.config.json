@@ -1,0 +1,347 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.3",
+	"appid": "wx93802d457635040b",
+	"projectname": "yw_weixin",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 42,
+			"list": [
+				{
+					"id": -1,
+					"name": "list",
+					"pathName": "pages/list/list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "carlist",
+					"pathName": "pages/carlist/carlist",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/search/search",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "list_detail",
+					"pathName": "pages/list_detail/list_detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "onLoad",
+					"pathName": "pages/onLoad/onLoad",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "order_details",
+					"pathName": "pages/order_details/order_details",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "personal",
+					"pathName": "pages/personal/personal",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "feedback",
+					"pathName": "pages/feedback/feedback",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "updata",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "ID=1",
+					"pathName": "pages/onLoad/onLoad",
+					"query": "id=1",
+					"scene": 1011
+				},
+				{
+					"id": 11,
+					"name": "test",
+					"pathName": "pages/authorization/authorization",
+					"query": "devicenumber=00220041",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "ID=1",
+					"pathName": "pages/list_detail/list_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "order_detail",
+					"pathName": "pages/order_detail/order_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "webview",
+					"pathName": "pages/webview/webview",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "order_ payment ",
+					"pathName": "pages/order_ payment /order_ payment ",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 16,
+					"name": "正常启动",
+					"pathName": "pages/authorization/authorization",
+					"query": "devicenumber= 00250001",
+					"scene": 1011
+				},
+				{
+					"id": -1,
+					"name": "occupied",
+					"pathName": "pages/occupied/occupied",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "fare_payment",
+					"pathName": "pages/fare_payment/fare_payment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "map",
+					"pathName": "pages/map/map",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "vacancy_list",
+					"pathName": "pages/vacancy_list/vacancy_list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order_list/order_list",
+					"pathName": "pages/order_list/order_list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order_details_history/order_details_history",
+					"pathName": "pages/order_details_history/order_details_history",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order_details/order_details",
+					"pathName": "pages/order_details/order_details",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order_detail/order_detail",
+					"pathName": "pages/order_detail/order_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fare_payment/fare_payment",
+					"pathName": "pages/fare_payment/fare_payment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/list/list",
+					"pathName": "pages/list/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/feedback/feedback",
+					"pathName": "pages/feedback/feedback",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/webview_agreement/agreement",
+					"pathName": "pages/webview_agreement/agreement",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order_ payment/order_ payment",
+					"pathName": "pages/order_ payment/order_ payment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/chepai/chepai",
+					"pathName": "pages/chepai/chepai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/reserve_order_pay/reserve_order_pay",
+					"pathName": "pages/reserve_order_pay/reserve_order_pay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "正常启动",
+					"pathName": "pages/convenient_unlock/convenient_unlock",
+					"query": "devicenumber= 00250001",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "正常启动",
+					"pathName": "pages/vacancy_list/vacancy_list",
+					"query": "devicenumber= 00250001",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order",
+					"pathName": "pages/order/order",
+					"query": "devicenumber= 00250001",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/vacancy_list/vacancy_list",
+					"pathName": "pages/vacancy_list/vacancy_list",
+					"query": "devicenumber= 00250001",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order",
+					"pathName": "pages/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rent/rent",
+					"pathName": "pages/rent/rent",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rent_type/rent_type",
+					"pathName": "pages/rent_type/rent_type",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fixed_car/fixed_car",
+					"pathName": "pages/fixed_car/fixed_car",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rent_deal/rent_deal",
+					"pathName": "pages/rent_deal/rent_deal",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/car_rent/car_rent",
+					"pathName": "pages/car_rent/car_rent",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/achepai/achepai",
+					"pathName": "pages/achepai/achepai",
+					"scene": null
+				}
+			]
+		}
+	}
+}

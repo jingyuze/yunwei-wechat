@@ -1,0 +1,128 @@
+/* pages/carlist/carlist.wxss */
+page{height: 100%;overflow: hidden;}
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
+.bt {
+  border-top: 2rpx solid #F3F3F3;
+  border-bottom: 2rpx solid #F3F3F3;
+  width: 95%;
+  display: flex;
+
+
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  
+}
+.zj{
+  width: 100%;
+ display: flex;
+  height: 79%;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+}
+
+.bu {
+  width: 25%;
+height: 50rpx;
+  display: inline-block;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  color: #444;
+  padding: 5rpx;
+border-bottom:2px solid #ffffff;
+  text-align: center;
+  border-right: 1rpx solid #DAD3DC;
+}
+
+.ge {
+  border-bottom: 2rpx solid #F3EEEC;
+  transition: all .5S;
+}
+
+.q {
+  width: 34%;
+  display: block;
+  float: right;
+  margin: 10rpx;
+}
+.qq{
+  width: 37%;
+}
+
+.tubiao {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  float: right;
+  margin-right: 20rpx;
+  z-index: 999;
+}
+.fotter{width: 100%;height: 90rpx;position: fixed;bottom: 0;left: 0;background: #FAFAFA;}
+.fotter_text{width: 65%;display: flex;float: left;height: 100%;align-items: center;justify-content: center;letter-spacing: 3rpx;font-size: 35rpx;}
+.post{width: 35%;display: flex;float: right;background: #23BFB2;height: 100%;align-items: center;justify-content: center;color: white;letter-spacing: 1rpx;font-size: 35rpx;}
+.ch{width: 100%;height: 90rpx;display: flex;overflow: hidden;border-bottom: 2rpx solid #F3F3F3;}
+.ch::first{margin-top: 0rpx;}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #23BFB2;border:1rpx solid #08BCCE;
+}
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  border:1rpx solid #08BCCE;
+  width: 22rpx;
+  height: 22rpx;
+  line-height: 22rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+.list{width: 100%;height: 100%;display: flex;flex-direction: column;overflow: hidden;}
+.lis{width: 100%;height: 90rpx;display: flex;flex-direction: row;justify-content: space-between;line-height: 90rpx;background: white;
+overflow: hidden;}
+.wenzi_1{display: flex;letter-spacing: 1rpx;font-size: 30rpx;float: left;margin-left: 50rpx}
+.wenzi_2{display: flex;letter-spacing: 1rpx;font-size: 30rpx;margin: 0 auto;}
+.datu{width: 350rpx;height: 350rpx;position: absolute;margin-left: -175rpx;left: 50%;margin-top: -175rpx;top: 50%;text-align: center;display: flex;align-items: center;justify-content: center;flex-direction: column;}
+.tu{width: 250rpx;height: 250rpx;}
+.tishi{display: flex;font-size: 30rpx;text-align: center;}
+.xixi{margin-left: 8%;}
+.cheak{margin: auto;margin-right: 40rpx;}
+checkbox .wx-checkbox-input{
+  border:1rpx solid #08BCCE;
+  border-radius: 8rpx;width: 35rpx;height: 35rpx;
+}
+
+.bright789_view_hide{
+     animation: slideup 0.5s linear ;
+     transform: translateX(200rpx);
+     transition: 1S;
+}
+.bright789_view_show{
+    animation: slidedown 0.5s linear ;
+    transform: translateX(0);
+    transition: 1S;
+}
+/* @keyframes slidedown {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes slideup {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+} */
+.b{width: 18%;position: absolute;top: 8%;right: 5%;overflow: hidden;z-index: 999;height: 50rpx;}
+.z{font-size: 30rpx;display: block;background: #23BFB2;color: #ffffff;border-radius:10rpx;text-align: center;height: 50rpx;line-height: 50rpx}

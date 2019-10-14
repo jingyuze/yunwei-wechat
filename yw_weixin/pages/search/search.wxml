@@ -1,0 +1,28 @@
+<!--pages/search/search.wxml-->
+<!-- search -->
+ <view class='page_row'>  
+      <view class="search">  
+        <view class="search_arr">  
+          <input class="tet" placeholder="请输入车位编号" bindinput='keywordInput'/>  
+           <view class='sou'>
+        <text bindtap='search'>搜索</text>
+        </view>
+    
+        </view>  
+       
+      </view>   
+    </view> 
+<!-- 中间列表 -->
+<scroll-view scroll-y style='white-space: nowrap;' class='zj'>
+<block wx:for="{{project}}" wx:key="{{index}}">
+<view class='list'>
+ <view class='fangkuai'>{{item.LotNumber}}</view>
+ <text class='wenzi_1' >{{item.LotState}}</text>
+ <text class='wenzi_2' bindtap='put' data-reply-Type='{{item.ID}},{{item.LotType}}'>{{item.BTContent}}</text>
+</view>
+</block>
+</scroll-view>
+<!-- 底部 -->
+<view class='fotter'>
+<image src="/images/phone.png" class='vv' mode="widthFix"></image>
+<text class='yangshi'>咨询热线： 13709021686</text></view>

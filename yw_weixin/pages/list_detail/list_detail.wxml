@@ -1,0 +1,32 @@
+<!--pages/list_detail/list_detail.wxml-->
+<view class='datu' hidden="{{xixi}}">
+<image src="/images/in_nothing.png" class='tu' mode="widthFix" hidden="{{xixi}}"></image>
+<view class='tishi' hidden="{{xixi}}">亲，该车位从未被预订!</view>
+</view>
+
+<scroll-view scroll-y style='white-space: nowrap;' class='zj'>
+<block wx:if="{{boolean==1}}">
+ <block>
+  <view class='box'>
+    <view class='wenzi'>车位号 : {{button.Floor}}</view>
+    <view class='wenzi'>车牌号 : {{button.PlateNumber}}</view>
+    <view class='wenzi'>预订时间: {{button.ReserveTime}}</view>
+    <view class='wenzi'>预订状态 : {{button.PayState}}</view>
+    <view class='wenzi'>手机号 : {{button.CarownerPhone}}</view>
+  </view>
+  </block>
+  </block>
+  <block wx:if="{{boolean==2}}">
+  <block wx:for="{{button}}" wx:key="{{index}}">
+  <view class='box'>
+    <view class='wenzi'>车位号 : {{item.Floor}}</view>
+    <view class='wenzi'>车牌号 : {{item.PlateNumber}}</view>
+    <view class='wenzi'>预订时间: {{item.ReserveTime}}</view>
+    <view class='wenzi'>入场时间 : {{item.ArriveTime}}</view>
+    <view class='wenzi'>离场时间 : {{item.LeaveTime}}</view>
+    <view class='wenzi'>手机号 : {{item.CarownerPhone}}</view>
+  </view>
+  </block>
+  </block>
+</scroll-view>
+<view class='fotter'><text class='yangshi'>成都云位信息技术有限公司</text></view>

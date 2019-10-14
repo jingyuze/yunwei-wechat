@@ -1,0 +1,49 @@
+<!--pages/carlist/carlist.wxml-->
+<view class='tubiao'>
+  <image src="/images/ic_add_3bbcd.png" bindtap='onChangeShowState' class='q qq' bindtap='choice' mode="widthFix"></image>
+   <image src="/images/ic_serach_3bbcd.png" class='q' bindtap='search' mode="widthFix"></image>
+</view>
+<!-- 选择层数 -->
+<view class="b {{showView?'bright789_view_show':'bright789_view_hide'}}">
+<block wx:for="{{dimian}}" wx:key="{{index}}">
+ <view bindtap='xuanze' data-id="{{index}}" data-reply-Type='{{index}}' class="z">
+{{item.Floor}}
+ </view>
+ </block>
+</view>
+<!-- 按钮 -->
+<scroll-view scroll-x style='white-space: nowrap;' class='bt'>
+<block wx:for="{{button}}" wx:key="{{index}}">
+  <view class='bu' bindtap='Title' style="{{index == id?'background:#23BFB2;border-bottom:2px solid #888888;color:#ffffff;':'background:#ffffff'}}" data-id="{{index}}" data-reply-Type='{{index}}' hover="true" hover-class="ge">{{item.Title}}</view>
+</block>
+</scroll-view>
+
+<!-- 中间列表 -->
+<scroll-view scroll-y style='white-space: nowrap;' class='zj'>
+<view class='datu' hidden="{{xixi}}">
+<image src="/images/in_nothing.png" class='tu' mode="widthFix" hidden="{{xixi}}"></image>
+<view class='tishi' hidden="{{xixi}}">暂无该类车位!</view>
+</view>
+
+<checkbox-group bindchange="checkboxChange">
+<block wx:for="{{project}}" wx:key="{{index}}">
+<!-- <navigator url="../list_detail/list_detail?id={{item.p_id}}"> -->
+<view catchtap='ch' class='ch'>
+
+<view bindtap='list' class='lis' id="{{item.ID}}" >
+
+<text class='wenzi_1'>{{item.LotNumber}}</text>
+<text class='wenzi_2'>{{item.LotState}}</text>
+</view>
+<checkbox value="{{item.ID}}" class='cheak' checked="{{item.checked}}"f/>
+</view>
+<!-- </navigator> -->
+</block>
+</checkbox-group>
+
+</scroll-view>
+<!-- 底部 -->
+<view class='fotter'>
+<view class='fotter_text'>已选中{{car}}个车位</view>
+<view class='post' bindtap='postpost'>{{name}}</view>
+</view>

@@ -1,0 +1,6 @@
+/* pages/webview_agreement/agreement.wxss */
+
+page {
+  
+  width: 100%;
+}

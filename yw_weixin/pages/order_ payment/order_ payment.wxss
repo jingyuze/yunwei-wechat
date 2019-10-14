@@ -1,0 +1,163 @@
+/* pages/order_ payment /order_ payment .wxss */
+
+page {
+  height: 100%;
+  overflow: hidden;
+  background: #eee;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  height: 60rpx;
+  font-size: 36rpx;
+  color: #250305;
+  line-height: 60rpx;
+  border-bottom: 10rpx solid #eee;
+  font-weight: bold;
+  padding: 5rpx 0;
+  padding-left: 30rpx;
+  background: #fff;
+}
+
+.box {
+  width: 100%;
+  padding: 20rpx 0;
+  border-bottom: 10rpx solid #eee;
+  background: #fff;
+}
+
+.wenzi {
+  display: flex;
+  letter-spacing: 0rpx;
+  margin: 0rpx 0;
+  padding: 8rpx 0 8rpx 45rpx;
+  font-size: 32rpx;
+  color: #756e6e;
+  width: 100%;
+  height: 40rpx;
+  align-content: center;
+}
+
+.tiaozheng {
+  width: 70px;
+  display: block;
+  float: right;
+  background: #23bfb2;
+  text-align: center;
+  color: #fff;
+  border-radius: 10rpx;
+  margin-right: 150rpx;
+  height: 40rpx;
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+
+.tesu {
+  display: block;
+}
+
+.boxx {
+  width: 100%;
+  margin-top: 3%;
+  background: #fff;
+}
+
+.wenz {
+  display: flex;
+  letter-spacing: 0rpx;
+  margin: 0rpx 0;
+  padding: 18rpx 0 18rpx 45rpx;
+  font-size: 32rpx;
+  color: #756e6e;
+  border-bottom: 1rpx solid #e5e7e7;
+  background: #fff;
+}
+
+.dingdan {
+  width: 100%;
+  height: 100rpx;
+  margin: 0 auto;
+  border-bottom: 1rpx solid #e7e7ec;
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  overflow: hidden;
+}
+
+.tupian {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 8rpx 0 8rpx 45rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.t {
+  width: 12%;
+  display: block;
+  float: left;
+}
+
+.zhifu {
+  font-size: 30rpx;
+  display: block;
+  float: left;
+  padding-left: 15rpx;
+}
+
+.rad {
+  display: block;
+  float: right;
+  position: absolute;
+  right: 0;
+  padding-right: 35rpx;
+}
+
+.but {
+  width: 80%;
+  margin-left: 10%;
+  background: #23bfb2;
+  color: #fff;
+  font-size: 32rpx;
+  letter-spacing: 3rpx;
+  position: absolute;
+  bottom: 0rpx;
+  margin-bottom: 0rpx;
+  height: 100rpx;
+  border-radius: none;
+  line-height: 100rpx;
+  font-weight: bold;
+}
+
+.HintContent {
+  font-size: 24rpx;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  color: #797575;
+}
+
+.countDown {
+  width: 100%;
+  color: #616161;
+  font-size: 28rpx;
+  letter-spacing: 0rpx;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0rpx;
+  height: 60rpx;
+  border-radius: none;
+  line-height: 60rpx;
+  text-align: center;
+}
+
+.wenzi_hint {
+  margin-top: 4rpx;
+  display: flex;
+  font-size: 20rpx;
+  color: rgb(255, 0, 0);
+  align-items: center;
+}

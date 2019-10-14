@@ -1,0 +1,135 @@
+/* pages/Convenient_unlock/Convenient_unlock.wxss */
+
+/* pages/chepai/chepai.wxss */
+
+page {
+  height: 100%;
+  overflow: hidden;
+  background: #eee;
+}
+
+.pages_header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pages_header_top {
+  width: 100%;
+  height: 460rpx;
+  /* background: red; */
+}
+
+.pages_box {
+  width: 90%;
+  height: 480rpx;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 100rpx;
+  overflow: hidden;
+}
+
+.plate-input-content {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+}
+
+.back {
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -99;
+}
+
+.select-box {
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
+}
+
+.select-img {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.pages_box_input {
+  width: 85%;
+  height: 80rpx;
+  margin: 0 auto;
+  margin-top: 40rpx;
+}
+
+.input_2 {
+  margin-top: 20rpx;
+}
+
+.radio-group {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.but {
+  width: 85%;
+  background: #23bfb2;
+  color: #fff;
+  font-size: 32rpx;
+  letter-spacing: 1rpx;
+  z-index: 99999;
+  margin-top: 40rpx;
+}
+
+.section {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  line-height: 80rpx;
+}
+
+.section input {
+  font-size: 26rpx;
+  height: 80rpx;
+  color: #6e6b6b;
+  background: #eee;
+  width: 70%;
+  border-radius: 6rpx;
+}
+
+.section__title {
+  width: 30%;
+  color: #1c1c1c;
+  font-size: 32rpx;
+  padding-left: 20rpx;
+}
+
+.pick_bind {
+  width: 70%;
+  height: 80rpx;
+  background: #eee;
+  border-radius: 6rpx;
+}
+
+.picker {
+  font-size: 26rpx;
+  height: 80rpx;
+  color: #6e6b6b;
+  padding-left: 20rpx;
+}
+
+.v_notify{
+  margin-top: 40rpx;
+   display: flex;
+   align-content: center;
+   justify-content: center;
+}
+
+
+.tv_notify{
+  font-size: 24rpx;
+  color: #4e4b4b;
+}

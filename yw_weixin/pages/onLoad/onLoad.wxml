@@ -1,0 +1,5 @@
+<!--pages/onLoad/onLoad.wxml-->
+<view class='content'>
+ <image src="/images/001.gif" class='q'></image>
+ <image src='/images/yunwei@3x.png' class='qq' mode='widthFix'></image>
+</view>

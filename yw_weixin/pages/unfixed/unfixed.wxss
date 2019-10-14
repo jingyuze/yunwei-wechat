@@ -1,0 +1,113 @@
+page {
+  height: 100%;
+  overflow: hidden;
+    position: relative;
+  background-color:  #ecf2f2;
+}
+.box {
+  width: 100%;
+}
+.input{height: 80rpx;}
+.box_1{width: 95%;height: 80rpx;display: flex;flex-direction: row;align-items: center;justify-content: space-between; border-bottom: 1rpx solid #e5e7e7;  background: #fff;margin: 0 auto;line-height: 80rpx;}
+.picker{padding-right: 18rpx;}
+.wenzi {
+  display: flex;
+  letter-spacing: 0rpx;
+  margin: 0rpx 0;
+  padding: 0rpx 18rpx 0rpx 18rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+}
+
+.tixing {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.tixing text {
+  font-size: 28rpx;
+  color: #fe191a;
+ 
+}
+.ti {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80rpx;
+}
+
+.tishi {
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 65rpx;
+  margin-right: 65rpx;
+  margin-top: 30rpx;
+
+}
+
+.qq {
+  width: 80rpx;
+  height: 80rpx;
+  display: block;
+  float: left;
+}
+
+.tv_hint_title {
+  color: #23bfb2;
+  font-size: 28rpx;
+}
+
+.tv_hint {
+  font-size: 26rpx;
+  color: #4e4b4bf3;
+}
+
+.v_hint {
+height: 100rpx;
+  justify-content: flex-start;
+}
+
+.zhifuf{width: 100%;height: 100rpx;background: #434343;display: flex;flex-direction: row;z-index: 2;position: absolute;bottom: 0;}
+.total{width: 70%;height: 100rpx;display: flex;flex-direction: row;justify-content: space-around;align-items: center;color: #fff}
+.makesure_pay{width: 30%;height: 100rpx;display: flex;align-items: center;justify-content: center;background: #23bfb2;color: #ffffff;font-size: 32rpx;z-index: 9999;}
+.total_2{height: 100rpx;display: flex;align-items: center;}
+.pay_box{width: 100%;height: 240rpx;position: absolute;bottom: 0;display: flex;align-items: center;flex-direction: column;background: #ffffff;z-index: 999;}
+.tupian {
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+.tupian:first-child{border-bottom: 1rpx solid #E1E1E1;}
+.zhifu {
+  font-size: 30rpx;
+  display: block;
+  float: left;
+  padding-left: 15rpx;
+}
+.t {
+  width: 12%;
+  display: block;
+  float: left;
+  padding-left: 40rpx;
+}
+.bright789_view_hide{
+     animation: slideup 0.5s linear ;
+     transform: translateY(240rpx);
+     transition: 1S;
+}
+.bright789_view_show{
+    animation: slidedown 0.5s linear ;
+    transform: translateY(0);
+    transition: 1S;
+}
+.page_box{width: 100%;height: 100%;}

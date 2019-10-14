@@ -1,0 +1,12 @@
+<!--pages/parkinfo/parkinfo.wxml-->
+  <view class="header">
+  <image src="/images/bg.jpg" class='lj' mode="widthFix"></image>
+  </view>
+  <view class='box'>
+    <block wx:for="{{return_data}}" wx:for-item="item" wx:key="{{index}}">
+      <view class="box_1">
+        <view class="wenzi">{{return_data[index].Key}}</view>
+        <view class="wenzi" style="Color:{{return_data[index].Color}}">{{return_data[index].Value}}</view>
+      </view>
+    </block>
+  </view>

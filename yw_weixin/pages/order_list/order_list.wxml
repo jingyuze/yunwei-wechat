@@ -1,0 +1,85 @@
+<view class="v_order" wx:if="{{v_all_show}}">
+  <view class="v_current_order" wx:if="{{return_current_data}}">
+    <view class="v_title">
+      <text class="v_title_content">当前订单</text>
+    </view>
+    <view class="v_order_item" bindtap="current_details">
+      <view class="v_order_item_title">
+        <view class="v_order_item_title_01">
+          <text class="font_style">{{return_current_data.PlateNumber}}</text>
+        </view>
+        <view class="v_order_item_title_02">
+          <text class="font_style" style="color:{{return_current_data.Color}}">{{return_current_data.State}}</text>
+        </view>
+        <image class="v_order_item_title_img" src="../../images/order_list/ic_right_row.png" />
+      </view>
+      <view class="v_order_item_title_content">
+        <image class="v_order_item_title_content_img" src='../../images/order_list/ic_clock.png' />
+        <view class="v_order_item_content_item">
+          <text class="font_style">{{return_current_data.TimeValue}}</text>
+        </view>
+      </view>
+      <view class="v_order_item_title_content">
+        <image class="v_order_item_title_content_img" src='../../images/order_list/point_01.png' />
+        <view class="v_order_item_content_item">
+          <text class="font_style">{{return_current_data.StartSite}}</text>
+        </view>
+      </view>
+      <view class="v_order_item_title_content">
+        <image class="v_order_item_title_content_img" src='../../images/order_list/point_02.png' />
+        <view class="v_order_item_content_item">
+          <text class="font_style">{{return_current_data.EndSite}}</text>
+        </view>
+      </view>
+      <view class="v_order_item_title_content">
+        <image class="v_order_item_title_content_img" src='../../images/order_list/point_02.png' />
+        <view class="v_order_item_content_item">
+          <text class="font_style">{{return_current_data.ReserveLot}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="v_tv_content">
+    <text class="v_tv_content_font" bindtap="history_list">轻按查看历史订单</text>
+  </view>
+  <view class="v_current_order" hidden="{{histry_hidden}}">
+    <view class="v_title">
+      <text class="v_title_font">历史订单</text>
+    </view>
+    <view class="v_order_histery_item" wx:for="{{return_history_data}}" wx:for-item="item" wx:key="{{index}}" bindtap="history_details" data-reply-Type="{{index}}">
+      <view class="v_order_item_title">
+        <view class="v_order_item_title_01">
+          <text class="font_style">{{item.PlateNumber}}</text>
+        </view>
+        <view class="v_order_item_title_02" style="visibility:hidden">
+          <text class="font_style"  style="color:{{item.Color}};" >{{item.State}}</text>
+        </view>
+        <image class="v_order_item_title_img" src="../../images/order_list/ic_right_row.png" />
+      </view>
+      <view class="v_order_item_title_content">
+        <image class="v_order_item_title_content_img" src='../../images/order_list/ic_clock.png' />
+        <view class="v_order_item_content_item">
+          <text class="font_style">{{item.TimeValue}}</text>
+        </view>
+      </view>
+      <view class="v_order_item_title_content">
+        <image class="v_order_item_title_content_img" src='../../images/order_list/point_01.png' />
+        <view class="v_order_item_content_item">
+          <text class="font_style">{{item.StartSite}}</text>
+        </view>
+      </view>
+      <view class="v_order_item_title_content">
+        <image class="v_order_item_title_content_img" src='../../images/order_list/point_02.png' />
+        <view class="v_order_item_content_item">
+          <text class="font_style">{{item.EndSite}}</text>
+        </view>
+      </view>
+      <view class="v_order_item_title_content">
+        <image class="v_order_item_title_content_img" src='../../images/order_list/point_02.png' />
+        <view class="v_order_item_content_item">
+          <text class="font_style">{{item.ReserveLot}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

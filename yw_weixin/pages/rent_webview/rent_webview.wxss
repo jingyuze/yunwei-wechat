@@ -1,0 +1,6 @@
+/* pages/rent_webview/rent_webview.wxss */
+
+page {
+  
+  width: 100%;
+}

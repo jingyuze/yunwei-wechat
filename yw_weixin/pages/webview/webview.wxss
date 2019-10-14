@@ -1,0 +1,11 @@
+/* pages/webview/webview.wxss */
+.containe{width: 100%;height: 100%;overflow: hidden;display: flex;flex-direction: column;}
+.header{width: 100%;height: 70rpx;background:#FAC0CC;}
+.menu{width: 10%;position:absolute;left: 87%;top: 2.5%;}
+.text{display: flex;justify-content: center;white-space: nowrap;align-content: center;font-size: 30rpx;padding: 5rpx;}
+.text1{padding-top: 10px;}
+.text2{padding-bottom: 10px;}
+.page_content{height: 80%;display: flex;white-space: nowrap;}
+.bigimg{height: 100%;width: 170%;}
+.fotter{width: 100%;height: 70rpx;background:#FAC0CC;display: flex;flex-direction: row;justify-content: space-between;}
+.text3{justify-content: center;align-items: center;}

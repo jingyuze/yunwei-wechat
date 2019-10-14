@@ -1,0 +1,22 @@
+/* pages/list_detail/list_detail.wxss */
+page{height: 100%;overflow: hidden;background: #ffffff;position: relative;}
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
+.datu{width: 350rpx;height: 350rpx;position: absolute;margin-left: -175rpx;left: 50%;margin-top: -175rpx;top: 50%;text-align: center;display: flex;align-items: center;justify-content: center;flex-direction: column;}
+.tu{width: 250rpx;height: 250rpx;}
+.tishi{display: flex;font-size: 30rpx;text-align: center;}
+.zj{
+  width: 100%;
+ display: flex;
+  height: 95%;
+  flex-direction: column;
+  overflow: hidden;
+}
+.box{background: white;margin:15rpx 0;padding: 15rpx 0;border-bottom: 2rpx solid #F3F3F3;}
+.wenzi{display: flex;letter-spacing: 2rpx;margin: 5rpx 0;margin-left: 5%;font-size: 30rpx;}
+.fotter{width: 100%;height: 70rpx;position: absolute;bottom: 0;background: #23BFB2;display: flex;align-items: center;justify-content: center;color: #ffffff;}
+
+.yangshi{color: #ffffff;font-size:28rpx;letter-spacing: 1px;}

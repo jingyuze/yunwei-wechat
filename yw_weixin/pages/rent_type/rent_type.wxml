@@ -1,0 +1,29 @@
+<!--pages/rent_type/rent_type.wxml-->
+<view class="containe">
+  <image src="/images/beijing@3x.jpg" class='bg'></image>
+ <view class="header">{{ParkingName}}</view>
+ <view class="menu">
+  <view class="menu_left" bindtap="{{fixed}}" style="background:{{ left ? '#23bfb2' : '#ffffff' }};color:{{ left ? '#ffffff' : '#C9C9C9' }}">固定车位月租
+   <view class="triangle">
+     <image src="/images/s@3x.png" class='size'  style="display:{{ left ? 'block' : 'none' }};"></image>
+   </view>
+  </view>
+  <view class="menu_right" bindtap="{{nofixed}}" hidden="{{yincang}}" style="background:{{ right ? '#23bfb2' : '#ffffff' }};color:{{ right ? '#ffffff' : '#C9C9C9' }}">非固定车位月租
+  <view class="triangle">
+    <image src="/images/s@3x.png" class='size' style="display:{{ right ? 'block' : 'none' }};"></image>
+  </view>
+  </view>
+ </view>
+ <view class="content">
+  <view class="content_text">
+      <view>收费标准：{{RentMoney}}</view>
+      <view>简要说明：{{explain}}</view>
+  </view>
+  <view class="moshi" bindtap="rent_deal">
+    《月租协议》
+  </view>
+ </view>
+</view>
+<view class="submit" bindtap="submit">
+同意协议，确认申请
+</view>

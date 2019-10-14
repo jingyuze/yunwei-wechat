@@ -1,0 +1,56 @@
+<!--pages/fixed_car/fixed_car.wxml-->
+<view class="page_box" catchtap="hide" wx:if="{{xixi}}">
+  <view class='box'>
+    <block wx:for="{{return_data}}" wx:for-item="item" wx:key="{{index}}">
+      <view class="box_1" wx:if="{{return_data[index].State == 1}}">
+        <view class="wenzi">{{return_data[index].Key}}</view>
+        <view class="wenzi" style="Color:{{return_data[index].Color}}" bindtap="getInputValue">{{return_data[index].Value}}</view>
+      </view>
+      <view class="box_1" wx:elif="{{return_data[index].State == 2}}">
+        <view class="wenzi">{{return_data[index].Key}}</view>
+        <view class="wenzi" style="Color:{{return_data[index].Color}}">{{return_data[index].Value}}</view>
+      </view>
+      <view class="box_1" wx:elif="{{return_data[index].State == 3}}">
+        <view class="wenzi">{{return_data[index].Key}}</view>
+        <picker class="picker" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view style="Color:{{return_data[3].Color}}">
+            {{array[inde]}}
+          </view>
+        </picker>
+      </view>
+      <view class="box_1" wx:else>
+        <view class="wenzi">{{return_data[index].Key}}</view>
+        <view class="wenzi" style="Color:{{return_data[index].Color}}">{{return_data[index].Value}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="tishi">
+    <view class="ti">
+      <image src='/images/xiaobiaozhi@2x.png' class='qq'></image>
+      <text class="tv_hint_title">温馨提示</text>
+    </view>
+    <view class="v_hint">
+      <text class="tv_hint">{{button.HintContent}}</text>
+    </view>
+  </view>
+  <view class="zhifuf">
+    <view class="total">
+      <view class="total_1">费用合计</view>
+      <view class="total_2">
+        <text style="Color:#FA820D;font-size:36rpx;" decode="{{true}}">{{money}}&nbsp;</text>
+        <text style="Color:#fff;font-size:28rpx;">元</text>
+      </view>
+    </view>
+    <view class="makesure_pay" catchtap="makesure_pay">确认支付</view>
+  </view>
+</view>
+<view class="pay_box {{showView?'bright789_view_show':'bright789_view_hide'}}">
+  <view class='tupian' catchtap="zhifu">
+    <image src="/images/weixing@3x.png" class='t' mode="widthFix"></image>
+    <text class="zhifu">微信支付</text>
+  </view>
+  <view class='tupian' catchtap="save_pay">
+    <image src="/images/geren@3x.png" class='t' mode="widthFix"></image>
+    <text class="zhifu">充值支付</text>
+  </view>
+</view>

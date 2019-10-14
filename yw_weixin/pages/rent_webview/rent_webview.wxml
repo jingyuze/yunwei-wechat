@@ -1,0 +1,2 @@
+<!--pages/rent_webview/rent_webview.wxml-->
+<web-view src="{{weburl}}"></web-view>

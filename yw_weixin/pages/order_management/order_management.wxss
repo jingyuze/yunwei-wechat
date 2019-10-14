@@ -1,0 +1,30 @@
+/* pages/order_management/order_management.wxss */
+/* pages/user_management/user_management.wxss */
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
+.datu{width: 300rpx;height: 300rpx;position: absolute;margin-left: -150rpx;left: 50%;margin-top: -150rpx;top: 50%;text-align: center;}
+.tu{width: 250rpx;height: 250rpx;}
+.tishi{display: flex;font-size: 30rpx;text-align: center;}
+page{height: 100%;overflow: hidden;}
+.header{width: 100%;height: 7%;background: #F2F2F2;display: flex;justify-content: space-between;flex-direction: row;align-items: center;}
+.box_1{width: 20%;height: 100%;display: flex;align-items: center;font-size: 30rpx;
+}
+.box_4{width: 40%;height: 100%;display: flex;align-items: center;font-size: 30rpx;padding-left:45rpx; 
+}
+.box_2{width: 13%;height: 100%;display: flex;justify-content: center;align-items: center;font-size: 30rpx;}
+.box_3{width: 12%;height: 100%;display: flex;justify-content: center;align-items: center;font-size: 30rpx;}
+.zj{width: 100%;height: 87%;overflow: hidden;position: relative;}
+.box{width: 100%;height: 120rpx;display: flex;justify-content: space-between;align-items: center;border-bottom: 2rpx solid #F3F3F3;margin-top: 10rpx;}
+.box_a{width: 20%;height: 120rpx;display: flex;align-items: center;overflow: hidden;}
+.t{width: 50%;border-radius: 80rpx;display:block;}
+.box_b{width: 20%;height: 120rpx;display:flex;font-size: 30rpx;overflow: hidden;flex-wrap:warp;white-space: pre-wrap;align-items: center;justify-content: center;}
+.index{margin: 10rpx;}
+.box_c{width: 13%;height: 120rpx;display: flex;justify-content: center;align-items: center;font-size: 37rpx;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;color: #F62020;}
+.box_d{width: 12%;height: 120rpx;display: flex;justify-content: center;align-items: center;font-size: 33rpx;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;color: #41C7BB;}
+.box_e{width: 20%;height: 120rpx;display: flex;font-size: 30rpx;overflow: hidden;align-items: center;}
+.fotter{width: 100%;height: 70rpx;position: absolute;bottom: 0;background: #23BFB2;display: flex;align-items: center;justify-content: center;color: #ffffff;font-size: 33rpx;}
+
+.yangshi{color: #ffffff;font-size:28rpx;letter-spacing: 1px;}

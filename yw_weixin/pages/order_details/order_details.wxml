@@ -1,0 +1,19 @@
+<!--pages/order_details/order_details.wxml-->
+<view class='containr'>
+  <view class='bg'>
+  <image src="/images/head.png" class='t' mode="widthFix"></image>
+  </view>
+  <view class='owner'>
+     <view class='table rig'>{{result.UserName}}</view>
+      <view class='table rig'>{{result.PlateNumber}}</view>
+       <view class='table'>{{result.ReserveLot}}</view>
+  </view>
+</view>
+
+<view class='box'>
+    <view class='wenzi'>车位号 : {{result.ReserveLot}}</view>
+    <view class='wenzi'>车牌号 : {{result.PlateNumber}}</view>
+    <view class='wenzi'>预订时间: {{result.ReserveTime}}</view>
+    <view class='wenzi'>支付状态 : {{result.PayState}}</view>
+    <view class='wenzi'>电话号码 : {{result.PhoneNumber}}</view>
+</view>

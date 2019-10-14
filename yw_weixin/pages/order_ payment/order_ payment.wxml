@@ -1,0 +1,42 @@
+<!--pages/order_ payment /order_ payment .wxml-->
+<view class="v_open_lock_oder" wx:if="{{v_all_show}}">
+  <view class="header">{{result.LotNumber}}</view>
+  <view class='box'>
+    <view class='wenzi'>信息服务费 : {{result.ServiceFee}}元<text class="wenzi_hint">{{result.PromotionalDesc}}</text></view>
+    <view class='wenzi'>车位占用费 : {{result.OccupationFee}}元</view>
+    <view class='wenzi'>收费标准 : {{result.Feescale}}</view>
+    <view class='wenzi'>停车场名称 : {{result.ParkingName}}</view>
+    <view class='wenzi tesu'>车牌号 :
+      <text style="color:#23bfb2">{{result.PlateNumber}}</text>
+      <!--<view class="tiaozheng">更改</view>-->
+    </view>
+    <view class='wenzi'>手机号 : {{result.PhoneNumber}}</view>
+  </view>
+  <view class='boxx'>
+    <view class='wenz'>需要支付 : {{result.TotalMoney}}元</view>
+    <!-- 固定车位 -->
+    <radio-group class="radio-group" bindchange="radioChange">
+      <view class='dingdan' hover='true' hover-class='h' hover-start-time='300' hidden="{{gdcw}}">
+        <view class='tupian'>
+          <image src="/images/weixing@3x.png" class='t' mode="widthFix"></image>
+          <text class="zhifu">微信支付\n<text style="font-size: 20rpx;color:#756e6e">\t  </text></text>
+          <radio value="wechat" checked="true" class="rad" />
+        </view>
+      </view>
+      <!-- 开放车位 -->
+      <view class='dingdan' hover='true' hover-class='h' hover-start-time='300' hidden="{{kfcw}}">
+        <view class='tupian'>
+          <image src="/images/geren@3x.png" class='t' mode="widthFix"></image>
+          <text class="zhifu">充值支付\n<text style="font-size: 20rpx;color:#756e6e;">余额:{{result.Money}}元</text></text>
+          <radio value="self" class="rad" />
+        </view>
+
+      </view>
+    </radio-group>
+  </view>
+  <view class='HintContent' style="font-size:28rpx;padding-top:10rpx;">{{result.HintContent}}</view>
+
+  <button class='but' bindtap="zhifu" disabled="{{timeout}}" style='margin-bottom:{{ isIphoneX ? 150 : 100 }}rpx;'>立即支付</button>
+  <view class='countDown' hidden="{{yincang}}" style='margin-bottom:{{ isIphoneX ? 50 : 0 }}rpx;'>离支付结束还剩：
+    <text style='color:red'>{{countDownNum}}</text> 秒</view>
+</view>

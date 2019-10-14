@@ -1,0 +1,28 @@
+<!--pages/login/login.wxml-->
+<!-- 广告轮播 -->
+<!-- <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{bg}}" style='height:{{Height}}' class='bor'>
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <navigator url="{{item.link}}">
+        <image src="{{item.url}}" class="slide-image" mode="widthFix" bindload='imgHeight' />
+      </navigator>
+    </swiper-item>
+  </block>
+</swiper> -->
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class='box bb'>
+
+<view class='pa'>
+<input name='username' class="inp" placeholder="请输入停车场编码"  maxlength="16"  focus="false" type='number'/>
+</view>
+</view>
+<view class='box'>
+
+<view class='pa'>
+<input class="inp" name='password' placeholder="请输入停车场授权码" password="true" maxlength="16" type="text"/>
+</view>
+</view>
+<button class='bto' hover="true" hover-class="ge" hover-start-time='300' formType="submit">立即登录</button>
+
+</form>
+<view class='fotter'><text class='yangshi'>成都云位信息技术有限公司</text></view>

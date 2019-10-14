@@ -1,0 +1,6 @@
+/* pages/authorization/authorization.wxss */
+page{height: 100%;overflow: hidden;}
+.content{width: 100%;height:160rpx;position: relative;display: flex;justify-content: center;margin-top: 240rpx;}
+.qq{width: 50%;display: block;margin: 0 auto;}
+.but{width: 80%;background: #F49D3C;color: #ffffff;font-size: 35rpx;letter-spacing: 1rpx;margin-top: 40rpx;}
+.copy{width: 100%;display: flex;justify-content: center;font-size: 24rpx;color: #A6A6A6;text-align: center;margin-top: 15rpx;}

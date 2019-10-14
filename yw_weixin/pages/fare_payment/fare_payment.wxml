@@ -1,0 +1,66 @@
+<!--pages/fare_payment/fare_payment.wxml-->
+<view class='datu' wx:if="{{xixi}}">
+  <image src="/images/000@3x.png" class='tu' mode="widthFix"></image>
+  <view class='tishi'>亲，没有需要结算的订单哦!</view>
+</view>
+<view class="page_box" catchtap="hide" wx:if="{{show}}">
+
+  <view class="v_content">
+    <view class="header">
+      <text class="tv_plate"> 车牌号:{{result.PlateNumber}}</text>
+    </view>
+    <view class="box">
+      <view class="head"></view>
+      <view class="content">
+        <view class="he">{{result.ParkingName}}</view>
+        <view class="space_line"></view>
+        <view class='wenzi tesu'>
+          <text class="a">当前车位 :</text>
+          <text class="b">{{result.ReserveLot}}</text>
+        </view>
+        <view class='wenzi'>
+          <text class="a">入场时间 :</text>
+          <text class="b"> {{result.ArriveTime}}</text>
+        </view>
+        <view class='wenzi'>
+          <text class="a">离场时间 : </text>
+          <text class="b">{{result.LeaveTime}}</text>
+        </view>
+        <view class='wenzi'>
+          <text class="a">停车时长 : </text>
+          <text class="b">{{result.Interval}}</text>
+        </view>
+        <view class='wenzi'>
+          <text class="a">续订费用 : </text>
+          <text class="b">{{result.PayContinueMoney}}元</text>
+        </view>
+        <view class='wenzi tesu_1'>
+          <text class="tv_a_font">总消费 : </text>
+          <text class="tv_b_font">{{result.PayFinishMoney}}元</text>
+        </view>
+      </view>
+    </view>
+    <view class="tishi">
+      <view class="ti">
+        <image src='/images/xiaobiaozhi@2x.png' class='qq'></image>
+        <text class="tv_hint_title">温馨提示</text>
+      </view>
+
+      <view class="v_hint">
+        <text class="tv_hint">{{result.HintContent}}</text>
+      </view>
+    </view>
+    <button class='but' catchtap="slidi_up" hidden="{{timeout}}">确认支付</button>
+  </view>
+</view>
+
+<view class="pay_box {{showView?'bright789_view_show':'bright789_view_hide'}}">
+  <view class='tupian' catchtap="zhifu">
+    <image src="/images/weixing@3x.png" class='t' mode="widthFix"></image>
+    <text class="zhifu">微信支付</text>
+  </view>
+  <view class='tupian' catchtap="save_pay">
+    <image src="/images/geren@3x.png" class='t' mode="widthFix"></image>
+    <text class="zhifu">充值支付</text>
+  </view>
+</view>

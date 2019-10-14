@@ -1,0 +1,36 @@
+<!--pages/occupied/occupied.wxml-->
+<view class='v_no_lot'>
+  <view class="v_hint_content">
+    <view class="v_image_hint">
+      <image class="image_hint" src="../../images/public/logo_down.png" />
+    </view>
+    <view class="v_tv_hint">
+      <view class="v_tv_hint_item">
+        <text class="tv_hint">很遗憾，您扫码的车位已被其他用</text>
+      </view>
+      <view class="v_tv_hint_item">
+        <text class="tv_hint">户预订。请重新扫描其他车锁二维</text>
+      </view>
+      <view class="v_tv_hint_item">
+        <text class="tv_hint">码或在空位列表中选择！</text>
+      </view>
+    </view>
+  </view>
+  <view class="v_bottom_button">
+    <view class="v_bottom_scan" bindtap="kaisuo">
+      <view>
+        <image class="image_button" src="../../images/public/scan.png" />
+      </view>
+      <view class = "v_bottom_tv">
+        <text class="tv_bottom_scan">扫码开锁</text>
+      </view>
+    </view>
+    <view class="v_bottom_list" bindtap="list">
+      <view>
+        <image class="image_button" src="../../images/ic_list_blue.png"/>
+      </view>
+      <view class = "v_bottom_tv">
+        <text class="tv_bottom_list">空位列表</text> </view>
+    </view>
+  </view>
+</view>

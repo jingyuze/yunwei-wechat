@@ -1,0 +1,52 @@
+<!--pages/reserve_order_pay/reserve_order_pay.wxml-->
+<view class="v_reserve_order" wx:if="{{v_all_show}}">
+  <view class='box'>
+    <view class='wenzi'>
+      <text>车位占用费 : </text>
+      <text>{{OccupationFee}}元</text>
+    </view>
+    <view class='wenzi'>
+      <text>信息服务费 : </text>
+      <text>{{ServiceFee}}元</text>
+    </view>
+
+    <view class='wenzi'>
+      <text>合计支付 : </text>
+      <text>{{TotalMoney}}元</text>
+    </view>
+  </view>
+  <view class='boxx'>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <view class='dingdan' hover='true' hover-class='h' hover-start-time='300' hidden="{{gdcw}}">
+        <view class='tupian'>
+          <image src="/images/weixing@3x.png" class='t' mode="widthFix"></image>
+          <text class="zhifu">微信支付\n<text style="font-size: 20rpx;color:#756e6e"></text></text>
+          <radio value="wechat" checked="true" class="rad" />{{item.value}}
+        </view>
+      </view>
+      <!-- 开放车位 -->
+      <view class='dingdan' hover='true' hover-class='h' hover-start-time='300' hidden="{{kfcw}}">
+        <view class='tupian'>
+          <image src="/images/geren@3x.png" class='t' mode="widthFix"></image>
+          <text class="zhifu">余额支付\n<text style="font-size: 20rpx;color:#756e6e;">{{result.Money}}元</text></text>
+          <radio value="self" class="rad" />{{item.value}}
+        </view>
+
+      </view>
+    </radio-group>
+  </view>
+
+  <view class='shuoming' style="font-size:28rpx;padding-top:10rpx;">支付说明:</view>
+  <view class='shuoming' decode="{{true}}" style="font-size:28rpx;padding-top:5rpx;">{{HintContent}}</view>
+
+  <view class='v_clock'>
+    <image src="../../images/public/clock_minus.png" class='clock_01' bindtap='clock_01' mode="widthFix"></image>
+    <view class='shijian'>{{ShowInterval}}h
+    </view>
+    <image src="../../images/public/clock_add.png" class='clock_02' bindtap='clock_02' mode="widthFix"></image>
+  </view>
+  <view class='tishi' style="font-size:28rpx;padding-top:5rpx;"> (温馨提示：点“+”可增加预订时间哦！)</view>
+  <button class='but' bindtap="zhifu" disabled="{{timeout}}" style='margin-bottom:{{ isIphoneX ? 150 : 100 }}rpx;'>立即支付</button>
+  <view class='countDown' hidden="{{yincang}}" style='padding-bottom:{{ isIphoneX ? 50 : 0 }}rpx;'>离支付结束还剩
+    <text style='color:red'>{{countDownNum}}</text>s</view>
+</view>

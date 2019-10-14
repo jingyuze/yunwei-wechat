@@ -1,0 +1,7 @@
+<!--pages/authorization/authorization.wxml-->
+<view class='content'>
+ <image src='/images/yunwei@3x.png' class='qq' mode='widthFix'></image>
+ 
+</view> 
+<button class='but' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">授权登录</button>
+<view class="copy">登录即代表您同意我们的 服务协议 和 隐私政策</view>

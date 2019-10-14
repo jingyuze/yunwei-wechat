@@ -1,0 +1,23 @@
+/* pages/parkinfo/parkinfo.wxss */
+page {
+  height: 100%;
+  overflow: hidden;
+    position: relative;
+  background-color:  #ecf2f2;
+}
+.header{width: 100%;}
+.box {
+  width: 100%;
+}
+.lj{width: 100%;}
+.input{height: 80rpx;}
+.box_1{width: 100%;height: 110rpx;display: flex;flex-direction: row;align-items: center;justify-content: space-between; border-bottom: 2rpx solid #e5e7e7;margin: 0 auto;line-height: 110rpx;}
+.picker{padding-right: 18rpx;}
+.wenzi {
+  display: flex;
+  letter-spacing: 0rpx;
+  margin: 0rpx 0;
+  padding: 0rpx 18rpx 0rpx 18rpx;
+  height: 110rpx;
+  font-size: 30rpx;
+}

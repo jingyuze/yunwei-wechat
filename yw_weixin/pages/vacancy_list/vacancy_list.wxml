@@ -1,0 +1,39 @@
+<!--pages/vacancy_list/vacancy_list.wxml-->
+  <view class='datu' hidden="{{xixi}}">
+    <image src="/images/LOGO@3x.png" class='tu' mode="widthFix" hidden="{{xixi}}"></image>
+    <view class='tishi' hidden="{{xixi}}">抱歉，当前没有空位了!</view>
+  </view>
+  <!-- <view class='lunbo'>温馨提示：女士优选车位为C11-C30</view> -->
+  <scroll-view scroll-y style='white-space: nowrap;' class='zj'>
+    <block wx:for="{{button}}" wx:key="{{index}}">
+      <view class='box'>
+        <view class="bianhao">
+    
+          <text class="hb">{{button[index].LotNumber}}</text>
+        </view>
+        <view class="zjj">
+          <view style="font-size:30rpx;padding-bottom: 10rpx; letter-spacing: 2rpx;">车位状态：
+            <text style="color:#23BFB2;">{{button[index].LotState}}</text>
+          </view>
+          <view class="pay_norm">
+            <text class="text_norm">收费标准：</text>
+            <text class="text_info" bindtap="pay_info" data-alpha-beta="{{index}}"> {{button[index].Feescale}}</text>
+          </view>
+        </view>
+        <view class="jw">
+          <view bindtap="yuding" data-id="{{index}}" class="ljyd">
+            <image src="/images/0010@3x.png" class='lj'></image>
+          </view>
+          <view bindtap="kaisuo" data-id="{{index}}" class="ljks">
+            <image src="/images/0020@3x.png" class='lj'></image>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+<view class='fotter'>
+  <view class="fotter_2">
+   <image src="/images/zhuanhuan@3x.png" class='tdu' mode="widthFix" bindtap="qiehuan"></image>
+  </view>
+</view>

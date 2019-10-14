@@ -1,0 +1,122 @@
+/* pages/order_list/order_list.wxss */
+
+page {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: column;
+  background-color: #ecf2f2;
+}
+.v_order{
+   display: flex;
+   flex-direction: column;
+}
+.v_current_order {
+  display: flex;
+  flex-direction: column;
+}
+
+.v_title {
+  display: flex;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.v_title_content{
+  color: #23bfb2;
+  font-size: 32rpx;
+}
+
+.v_order_item {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 630rpx;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+
+.v_order_histery_item {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 630rpx;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  margin-bottom: 40rpx;
+}
+
+.v_order_item_title {
+  width: 100%;
+  margin-top: 9rpx;
+  margin-bottom: 9rpx;
+  margin-left: 45rpx;
+  margin-right: 45rpx;
+  flex-direction: row;
+  display: flex;
+}
+
+.v_order_item_title_01 {
+  width: 287rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.v_order_item_title_02 {
+  margin-right: 20rpx;
+  width: 207rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.v_order_item_title_img {
+  height: 40rpx;
+  width: 24rpx;
+}
+
+.v_order_item_title_content {
+  padding-bottom: 6rpx;
+  padding-top: 6rpx;
+  margin-left: 45rpx;
+  margin-right: 45rpx;
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+}
+
+.v_order_item_title_content_img {
+  height: 30rpx;
+  width: 30rpx;
+  margin-right: 20rpx;
+}
+
+.v_order_item_content_item {
+  width: 490rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.font_style{
+  color: #898989;
+  font-size: 30rpx;
+}
+.v_tv_content{
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
+  width: 750rpx;
+  display: flex;
+  justify-content: center;
+}
+.v_tv_content_font{
+  color: #898989;
+  font-size: 28rpx;
+}
+
+.v_title_font{
+  color: #898989;
+  font-size: 32rpx;
+}

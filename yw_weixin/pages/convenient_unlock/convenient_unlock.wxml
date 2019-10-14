@@ -1,0 +1,39 @@
+<!--pages/Convenient_unlock/Convenient_unlock.wxml-->
+<view class='pages_header'>
+  <view class='pages_header_top'>
+    <image src='/images/beijing@3x.png' class='back' mode='widthFix'></image>
+    <view class="pages_box">
+      <view class="pages_box_input">
+        <view class="section">
+          <view class="section__title">停车场：</view>
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class="pick_bind">
+            <view class="picker">
+              {{array[index]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="pages_box_input input_2">
+        <view class="section">
+          <view class="section__title">车位号：</view>
+          <input bindinput="bindKeyInput" placeholder="请输入你要选择的车位号" style="padding-left:20rpx;" />
+        </view>
+      </view>
+      <!-- <view class="pages_box_kaisuo">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <label class="radio" wx:for="{{items}}">
+                <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.value}}
+              </label>
+            </radio-group>
+          </view> -->
+      <view class="v_notify">
+        <text class="tv_notify">(可在附近车场快捷开锁)</text>
+      </view>
+      <view class="pages_box_submit">
+        <button class='but' bindtap="open_lock">开锁</button>
+      </view>
+
+
+    </view>
+  </view>
+</view>

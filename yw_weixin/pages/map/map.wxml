@@ -1,0 +1,66 @@
+<!--pages/map/map.wxml-->
+<map id="map" latitude='{{latitude}}' enable-rotate="true" longitude='{{longitude}}' scale="16" enable-rotate bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" bindtap="bind" bindregionchange="regionchange" show-location include-points ayer-style enable-3D show-compass show-scale enable-overlooking enable-zoom enable-scroll enable-rotate style="width: 100%;">
+  <cover-view class="commodity_screen" bindtap="" wx:if="{{hidden}}">
+    <cover-view class="hea">
+      <cover-view class="tuotuo"></cover-view>
+      <cover-view class="adre">
+        <cover-view class="parkingname">{{ParkingName}}</cover-view>
+        <cover-view class="Address">{{Address}}</cover-view>
+      </cover-view>
+      <cover-view class="daohang" bindtap="daohang">开启导航 ></cover-view>
+    </cover-view>
+    <cover-view class="botto">
+      <cover-view class="cont">
+        <cover-view class="tuotuo" style="background:#FE0000;"></cover-view>
+        <cover-view class="Address" style="margin-left: 30rpx;color:#454444;font-size: 32rpx;padding:0;">车位空数 ：{{AvailableLot}}个        </cover-view>
+      </cover-view>
+      <cover-view class="cont">
+
+        <cover-view class="tuotuo" style="background:#EA7126;"></cover-view>
+
+        <cover-view class = "v_fee">
+          <cover-view class="Address" style="margin-left: 30rpx;color:#454444;font-size: 32rpx;padding:0;">收费标准 ：</cover-view>
+          <cover-view class = "v_fee_content">
+            {{Feescale}}
+          </cover-view>
+        </cover-view>
+
+      </cover-view>
+    </cover-view>
+
+    <!-- 下面的两个点击按钮 -->
+    <cover-view class="anniu">
+      <cover-view class="but" bindtap="list">空位列表</cover-view>
+      <cover-view class="but" bindtap="photo">空位图</cover-view>
+    </cover-view>
+
+  </cover-view>
+  <cover-view class="menu" wx:else style='margin-bottom:{{ isIphoneX ? 100 : 0 }}rpx;'>
+         <cover-view class="menu_2" bindtap="order">
+        <cover-image src='../../images/public/wodedingdan@3x.png' class='open'></cover-image>
+        <cover-view class="open_text">我的订单</cover-view>
+      </cover-view>
+        <cover-view class="border"></cover-view>
+    <cover-view class="menu_2" bindtap="kaisuo">
+        <cover-image src='../../images/public/scan.png' class='open'></cover-image>
+        <cover-view class="open_text">扫码开锁</cover-view>
+      </cover-view>
+       <cover-view class="border"></cover-view>
+      <cover-view class="menu_2" bindtap="convenient">
+        <cover-image src='../../images/public/kaisuo2@3x.png' class='open'></cover-image>
+        <cover-view class="open_text">不下车开锁</cover-view>
+      </cover-view> 
+  </cover-view>
+
+
+  <cover-view class="map-inputtips-input">
+    <cover-view class="mapinput">
+      <cover-image src='/images/fadajing@3x.png' class='qq' bindtap="bindInput"></cover-image>
+      <cover-view class="text" bindtap="bindInput">{{chooseAddress}}</cover-view>
+       <cover-image src='/images/caidan@3x.png' class='tab' bindtap="caidan"></cover-image>
+    </cover-view>
+  </cover-view>
+  <cover-image src='{{img}}' class='dingwei' catchtap="dingwei"></cover-image>
+
+
+</map>

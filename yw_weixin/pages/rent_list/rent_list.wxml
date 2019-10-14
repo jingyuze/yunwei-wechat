@@ -1,0 +1,32 @@
+<!--pages/rent_list/rent_list.wxml-->
+<!--pages/rent/rent.wxml-->
+  <view class='datu' hidden="{{xixi}}">
+    <image src="/images/LOGO@3x.png" class='tu' mode="widthFix" hidden="{{xixi}}"></image>
+    <view class='tishi' hidden="{{xixi}}">抱歉，当前没有空位了!</view>
+  </view>
+  <!-- <view class='lunbo'>温馨提示：女士优选车位为C11-C30</view> -->
+  <scroll-view scroll-y style='white-space: nowrap;' class='zj'>
+    <block wx:for="{{button}}" wx:key="{{index}}">
+      <view class='box'>
+        <view class="zjj">
+           <view class="cont">
+            <view class="tuotuo" style="background:#FE0000;"></view>
+            <view class="Address" style="font-size:33rpx;font-weight:bold;">{{button[index].LotNumber}}</view>
+           </view>
+             <view class="cont">
+            <view class="tuotuo" style="background:#23BFB2;"></view>
+            <view class="Address">停车场 ：{{button[index].ParkName}}</view>
+           </view>
+             <view class="cont">
+            <view class="tuotuo" style="background:#23BFB2;"></view>
+            <view class="Address" style="">车位状态 ：{{button[index].LotState}}</view>
+           </view>
+        </view>
+        <view class="jw">
+          <view class="ljks">
+            <image src="/images/anniu@2x.png" class='lj' bindtap="openlock" data-alpha-beta="{{index}}"></image>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
