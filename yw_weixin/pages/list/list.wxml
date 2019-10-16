@@ -33,3 +33,12 @@
     <text class="tv_menu">费用结算</text>
   </view>
 </view>
+
+<view class='dingdan'  bindtap="recharge" hover='true' hover-class='h' hover-start-time='300'>
+  <view class='tupian'>
+    <image src="/images/menu/biao4@3x.png" class='t' mode="widthFix"></image>
+  </view>
+  <view class='wenzi'>
+    <text class="tv_menu">充值中心</text>
+  </view>
+</view>

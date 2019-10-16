@@ -6,7 +6,7 @@ const wxMap = new QQMapWX({
 });
 const util = require("../../utils/util.js")
 var url = app.globalData.url
-var item, ParkingID, latitude, longitude, modell, parkingid, devicenumber, OrderType, scene,daohang = '';
+var item, ParkingID, latitude, longitude, modell, parkingid, devicenumber, OrderType, scene, daohang, screenwidth, screenheight = '';
 var markes_new = [{}]
 var ary = [{}]
 var AccessToken; //本地取存储的sessionID
@@ -178,6 +178,7 @@ Page({
 
   },
   photo: function() {
+    var that =this
     wx.request({
       url: url + '/public/index.php/wxinterfeace/park_info/park_single_url', //接口地
       method: "POST",
@@ -191,9 +192,12 @@ Page({
       success: function(res) {
         var query_clone = res.data;
         console.log("park_single_url-query_clone:" + query_clone.Data.WebUrl)
+        var getTimestamp = new Date().getTime();
+        console.log(ParkingID)
+        const web_url = query_clone.Data.WebUrl + "?parkingid=" + ParkingID + '&screenwidth=' + screenwidth + '&screenheight=' + screenheight + "&userid=&devicetype=3&floor=1&accesstoken=" + AccessToken + '&getTimestamp=' + getTimestamp
         if (query_clone.Result == '1') {
           wx.navigateTo({
-            url: '../webview/webview?webUrl=' + query_clone.Data.WebUrl + "&parkingID=" + query_clone.Data.ParkingID
+            url: '../webview/webview?webUrl=' + encodeURIComponent(web_url)
           });
         } else {
           wx.showToast({
@@ -288,6 +292,24 @@ Page({
     }
   },
   onLoad: function(options) {
+    wx.getSystemInfo({
+      success: function (res) {
+        // 获取可使用窗口宽度
+        let clientHeight = res.screenHeight;
+        // 获取可使用窗口高度
+        let clientWidth = res.screenWidth;
+        console.log(res.pixelRatio)
+        console.log(res.screenHeight)
+        // 算出比例
+        let ratio = 750 / clientWidth;
+        // 算出高度(单位rpx)
+        screenheight = clientHeight;
+        screenwidth = clientWidth;
+        // 设置高度
+        console.log(screenheight)
+        console.log(screenwidth)
+      }
+    });
     this.setData({
       isIphoneX: this.isIphoneX()
     })

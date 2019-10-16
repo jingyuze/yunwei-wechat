@@ -5,7 +5,7 @@
     <view class='tishi' hidden="{{xixi}}">抱歉，当前没有空位了!</view>
   </view>
   <!-- <view class='lunbo'>温馨提示：女士优选车位为C11-C30</view> -->
-  <scroll-view scroll-y style='white-space: nowrap;' class='zj'>
+  <scroll-view scroll-y style='white-space: nowrap;' class='zj' hidden="{{shw}}">
     <block wx:for="{{button}}" wx:key="{{index}}">
       <view class='box'>
         <view class="zjj">

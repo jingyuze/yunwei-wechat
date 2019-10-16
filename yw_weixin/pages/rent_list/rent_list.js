@@ -13,6 +13,7 @@ Page({
   data: {
     boolean: 0,
     xixi: true,
+    shw:false,
     button: '',
     qie: true
   },
@@ -25,14 +26,17 @@ Page({
       url: '../rent_type/rent_type?ParkingID=' + ParkingID,
     })
   },
-  openlock: (event)=>{
+  openlock:function(event){
+    let pages = getCurrentPages();
+    console.log(pages)
     console.log(alldata)
     console.log(event.currentTarget.dataset.alphaBeta)
     LotID = alldata[event.currentTarget.dataset.alphaBeta].LotID
     console.log(LotID)
     console.log(rentid)
     console.log(AccessToken)
-    const that = this
+    var that = this
+
     wx.request({
       url: url + '/public/index.php/wxinterfeace/open_lock/rent_unfixed_open_lock', //接口地
       method: "POST",
@@ -49,6 +53,7 @@ Page({
         console.log(res.data)
 
         if (query_clone.Result == '1') {
+         
           wx.showModal({
             title: '云位订吧',
             showCancel: false,
@@ -100,15 +105,77 @@ Page({
     })
 
   },
+  reset: function () {
+    console.log("我重载了页面")
+    this.onLoad()
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log("我进onload")
     rentid = options.rentid
     console.log(rentid)
     var accessToken = wx.getStorageSync('AccessToken'); //本地取存储
     AccessToken = accessToken;
     console.log(AccessToken)
+    // const that = this
+    // wx.request({
+    //   url: url + '/public/index.php/wxinterfeace/lot_info/rent_available_lot_list', //接口地
+    //   method: "POST",
+    //   data: {
+    //     "rentid": rentid
+    //   },
+    //   header: {
+    //     'content-type': 'application/x-www-form-urlencoded'
+    //   },
+    //   success: function (res) {
+    //     var query_clone = res.data;
+    //     console.log(res.data)
+    //     if (query_clone.Result == '1') {
+    //       if (query_clone.Data.length > 0) {
+    //         alldata = query_clone.Data
+    //         that.setData({
+    //           button: query_clone.Data,
+    //         })
+    //       } else {
+    //         that.setData({
+    //           xixi:false,
+    //         })
+    //       }
+
+    //     } else {
+    //       wx.showToast({
+    //         title: res.data.Message,
+    //         icon: 'none',
+    //       })
+    //     }
+
+    //   },
+    //   fail: function (res) {
+    //     wx.showToast({
+    //       title: '没有网络',
+    //       image: '../../images/public/ic_net_error.png',
+    //     })
+    //   },
+    // })
+
+    //渲染加载
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
     const that = this
     wx.request({
       url: url + '/public/index.php/wxinterfeace/lot_info/rent_available_lot_list', //接口地
@@ -129,8 +196,10 @@ Page({
               button: query_clone.Data,
             })
           } else {
+            console.log("进来了")
             that.setData({
-              xixi:false,
+              xixi: false,
+              shw:true
             })
           }
 
@@ -149,23 +218,6 @@ Page({
         })
       },
     })
-
-    //渲染加载
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
   },
 
   /**

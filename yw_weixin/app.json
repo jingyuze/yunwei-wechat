@@ -35,7 +35,8 @@
     "pages/rent_webview/rent_webview",
     "pages/parkinfo/parkinfo",
     "pages/rent_list/rent_list",
-    "pages/unfixed/unfixed"
+    "pages/unfixed/unfixed",
+    "pages/recharge/recharge"
   ],
   "permission": {
     "scope.userLocation": {

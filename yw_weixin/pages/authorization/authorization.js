@@ -132,6 +132,7 @@ Page({
       var accessToken = wx.getStorageSync('AccessToken'); //本地取存储
       AccessToken = accessToken;
       var that = this
+      //登录日志添加
       wx.request({
         url: url + '/public/index.php/wxinterfeace/login/login_log', //接口地
         method: "POST",

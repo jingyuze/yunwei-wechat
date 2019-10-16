@@ -1,0 +1,24 @@
+<!--pages/recharge/recharge.wxml-->
+<!-- 温馨提示 -->
+<view class="Money">
+  <view class="money_box">
+    <view class="money_text">账户当前余额(元)</view>
+    <view class="remain">{{money}}</view>
+  </view>
+</view>
+<view class="tishi">
+  <view class="ti">
+    <image src='/images/xiaobiaozhi@2x.png' class='qq'></image>
+    <text class="tv_hint_title">温馨提示</text>
+  </view>
+  <view class="v_hint">
+    <text class="tv_hint">充值用于预订车位占用费和信息服务费，在车主同意支付后，直接从充值账户扣除。</text>
+  </view>
+</view>
+<view class="money_button">
+<block wx:for="{{list}}" wx:key="{{index}}">
+  <view class="monty_button_style" bindtap="recharge" data-a="{{index}}">
+    {{list[index]}}元
+  </view>
+</block>
+</view>

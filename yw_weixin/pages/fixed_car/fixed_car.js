@@ -251,7 +251,21 @@ Page({
             title: res.data.Message,
             icon: 'none',
           })
-        } else {
+        } else if (query_clone.Result == '2') {
+          wx.showModal({
+            title: '云位订吧',
+            showCancel: false,
+            content: "res.data.Message",
+            success(res) {
+              if (res.confirm) {
+                wx.navigateTo({
+                  url: '../recharge/recharge',
+                })
+              }
+            }
+          })
+
+        }else {
           wx.showToast({
             title: res.data.Message,
             icon: 'none',

@@ -1,7 +1,7 @@
 // pages/car_rent/car_rent.js
 const app = getApp()
 var url = app.globalData.url
-var AccessToken, RentID, ParkingID, ButtonDesc ,RentLotURL, screenwidth, screenheight,alldata; //本地取存储的sessionID
+var AccessToken, RentID, ParkingID, ButtonDesc, RentLotURL, ParkList , screenwidth, screenheight,alldata; //本地取存储的sessionID
 const plugin = requirePlugin("WechatSI")
 var userid=''
 const manager = plugin.getRecordRecognitionManager()

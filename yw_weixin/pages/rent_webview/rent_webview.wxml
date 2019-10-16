@@ -1,2 +1,2 @@
 <!--pages/rent_webview/rent_webview.wxml-->
-<web-view src="{{weburl}}"></web-view>
+<web-view src="{{weburl}}" bindmessage="postinfo"></web-view>

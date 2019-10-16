@@ -44,9 +44,40 @@ Page({
         var query_clone = res.data;
         console.log(query_clone)
         if (query_clone.Result == '1') {
-          wx.redirectTo({
-            url: '../fare_payment/fare_payment?ParkingID=' + query_clone.Data.ParkingID + "&OrderID=" + query_clone.Data.OrderID
+          plugin.textToSpeech({
+            lang: "zh_CN",
+            tts: true,
+            content: "正在为您解锁，网络原因，可能有延时，请稍等！车位锁打开后，请及时入位",
+            success: function (res) {
+              console.log("succ tts", res.filename)
+              const innerAudioContext = wx.createInnerAudioContext()
+              innerAudioContext.autoplay = true
+              innerAudioContext.src = res.filename
+              innerAudioContext.onPlay(() => {
+                console.log('开始播放')
+              })
+              innerAudioContext.onError((res) => {
+                console.log(res.errMsg)
+                console.log(res.errCode)
+              })
+            },
+            fail: function (res) {
+              console.log("fail tts", res)
+            }
           })
+          wx.showModal({
+            title: '云位订吧',
+            showCancel: false,
+            content: "正在为您解锁，网络原因，可能有延时，请稍等！车位锁打开后，请及时入位",
+            success(res) {
+              if (res.confirm) {
+                wx.redirectTo({
+                  url: '../fare_payment/fare_payment?ParkingID=' + query_clone.Data.ParkingID + "&OrderID=" + query_clone.Data.OrderID
+                })
+              }
+            }
+          })
+        
         } else {
           if (OrderPayInfoState < 3) {
             setTimeout(function() {
@@ -124,27 +155,6 @@ Page({
               paySign: query_clone.Data.Sign,
               success: function() {
                 //语音提示正在打开车位锁
-                plugin.textToSpeech({
-                  lang: "zh_CN",
-                  tts: true,
-                  content: "正在打开车位锁，请稍等",
-                  success: function (res) {
-                    console.log("succ tts", res.filename)
-                    const innerAudioContext = wx.createInnerAudioContext()
-                    innerAudioContext.autoplay = true
-                    innerAudioContext.src = res.filename
-                    innerAudioContext.onPlay(() => {
-                      console.log('开始播放')
-                    })
-                    innerAudioContext.onError((res) => {
-                      console.log(res.errMsg)
-                      console.log(res.errCode)
-                    })
-                  },
-                  fail: function (res) {
-                    console.log("fail tts", res)
-                  }
-                })
                 setTimeout(function() {
                   that.orderpayinfo(query_clone.Data.ParkingID, query_clone.Data.OrderID);
                   OrderPayInfoState = OrderPayInfoState + 1;
@@ -202,8 +212,38 @@ Page({
           var query_clone = res.data;
           console.log(query_clone)
           if (query_clone.Result == '1') {
-            wx.redirectTo({
-              url: '../fare_payment/fare_payment?ParkingID=' + query_clone.Data.ParkingID + "&OrderID=" + query_clone.Data.OrderID
+            plugin.textToSpeech({
+              lang: "zh_CN",
+              tts: true,
+              content: "正在为您解锁，网络原因，可能有延时，请稍等！车位锁打开后，请及时入位",
+              success: function (res) {
+                console.log("succ tts", res.filename)
+                const innerAudioContext = wx.createInnerAudioContext()
+                innerAudioContext.autoplay = true
+                innerAudioContext.src = res.filename
+                innerAudioContext.onPlay(() => {
+                  console.log('开始播放')
+                })
+                innerAudioContext.onError((res) => {
+                  console.log(res.errMsg)
+                  console.log(res.errCode)
+                })
+              },
+              fail: function (res) {
+                console.log("fail tts", res)
+              }
+            })
+            wx.showModal({
+              title: '云位订吧',
+              showCancel: false,
+              content: "正在为您解锁，网络原因，可能有延时，请稍等！车位锁打开后，请及时入位",
+              success(res) {
+                if (res.confirm) {
+                  wx.redirectTo({
+                    url: '../fare_payment/fare_payment?ParkingID=' + query_clone.Data.ParkingID + "&OrderID=" + query_clone.Data.OrderID
+                  })
+                }
+              }
             })
           } else if (query_clone.Result == '2000') {
             wx.clearStorage()
@@ -214,7 +254,21 @@ Page({
               title: res.data.Message,
               icon: 'none',
             })
-          } else {
+          } else if (query_clone.Result == '2') {
+            wx.showModal({
+              title: '云位订吧',
+              showCancel: false,
+              content: "res.data.Message",
+              success(res) {
+                if (res.confirm) {
+                  wx.navigateTo({
+                    url: '../recharge/recharge',
+                  })
+                }
+              }
+            })
+
+          }else {
             wx.showToast({
               title: res.data.Message,
               icon: 'none',

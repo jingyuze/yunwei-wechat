@@ -26,6 +26,11 @@ Page({
       url: '../fare_payment/fare_payment',
     })
   },
+  recharge:()=>{
+    wx.navigateTo({
+      url: '../recharge/recharge',
+    })
+  },
   order: function () {
     wx.navigateTo({
       url: '../order_list/order_list'

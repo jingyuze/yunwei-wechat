@@ -13,8 +13,10 @@ Page({
     var that = this;
     var accessToken = wx.getStorageSync('AccessToken'); //本地取存储的sessionID
     AccessToken = accessToken;
-    WebURL = options.webUrl;
-    parkingID = options.parkingID;
+    WebURL = decodeURIComponent(options.webUrl);
+    
+    console.log(WebURL)
+
 console.log("onload")
   
   },
@@ -42,11 +44,8 @@ console.log("onload")
     var accessToken = wx.getStorageSync('AccessToken');
     AccessToken = accessToken;
     var that = this;
-    this.onLoad
-      var getTimestamp = new Date().getTime();
-    console.log("weburl:" + WebURL + "?parkingid=" + parkingID + '&screenwidth=' + screenwidth + ' &screenheight=' + screenheight +"&userid=&devicetype=3&floor=1&accesstoken=" + AccessToken + '&getTimestamp=' + getTimestamp);
     that.setData({
-      weburl: WebURL + "?parkingid=" + parkingID + '&screenwidth=' + screenwidth + ' &screenheight=' + screenheight + "&userid=&devicetype=3&floor=1&accesstoken=" + AccessToken + '&getTimestamp=' + getTimestamp
+      weburl: WebURL
     });
     //获取屏幕的宽高
     // 获取系统信息

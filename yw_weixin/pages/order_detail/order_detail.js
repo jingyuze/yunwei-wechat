@@ -2,7 +2,7 @@ const app = getApp()
 var url = app.globalData.url;
 const plugin = requirePlugin("WechatSI")
 const manager = plugin.getRecordRecognitionManager()
-var AccessToken;
+var AccessToken, screenwidth, screenheight;
 Page({
 
   /**
@@ -26,8 +26,10 @@ Page({
   },
   look_map:function(e){
     var that = this;
+    var getTimestamp = new Date().getTime();
+    const web_url = that.data.webUrl + "?parkingid=" + that.data.parkingid + '&screenwidth=' + screenwidth + '&screenheight=' + screenheight + "&userid=&devicetype=3&pagetype=2&floor=1&accesstoken=" + AccessToken + '&getTimestamp=' + getTimestamp
     wx.navigateTo({
-      url: '../webview/webview?webUrl=' + that.data.webUrl + "&parkingID=" + that.data.parkingid
+      url: '../webview/webview?webUrl=' + encodeURIComponent(web_url)
     });
   },
   cancel: function (e) {
@@ -139,7 +141,7 @@ Page({
                 plugin.textToSpeech({
                   lang: "zh_CN",
                   tts: true,
-                  content: "正在打开车位锁，请稍等",
+                  content: "正在为您解锁，网络原因，可能有延时，请稍等！车位锁打开后，请及时入位",
                   success: function (res) {
                     console.log("succ tts", res.filename)
                     const innerAudioContext = wx.createInnerAudioContext()
@@ -197,6 +199,24 @@ Page({
     
   },
   onLoad: function(options) {
+    wx.getSystemInfo({
+      success: function (res) {
+        // 获取可使用窗口宽度
+        let clientHeight = res.screenHeight;
+        // 获取可使用窗口高度
+        let clientWidth = res.screenWidth;
+        console.log(res.pixelRatio)
+        console.log(res.screenHeight)
+        // 算出比例
+        let ratio = 750 / clientWidth;
+        // 算出高度(单位rpx)
+        screenheight = clientHeight;
+        screenwidth = clientWidth;
+        // 设置高度
+        console.log(screenheight)
+        console.log(screenwidth)
+      }
+    });
     var accessToken = wx.getStorageSync('AccessToken');
     AccessToken = accessToken;
     var that = this;

@@ -49,7 +49,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 42,
+			"current": 43,
 			"list": [
 				{
 					"id": -1,
@@ -339,6 +339,13 @@
 					"id": -1,
 					"name": "pages/achepai/achepai",
 					"pathName": "pages/achepai/achepai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/recharge/recharge",
+					"pathName": "pages/recharge/recharge",
 					"scene": null
 				}
 			]
